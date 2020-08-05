@@ -14,22 +14,22 @@ public class UserController {
             @RequestParam(name = "item_per_page" ,defaultValue = "10") int itemPerPage) {
 
         PagingResponse pagingResponse = new PagingResponse(page, itemPerPage);
-        List<UsersResponse> usersResponseList = new ArrayList<>();
-        usersResponseList.add(new UsersResponse(1, "User 1"));
-        usersResponseList.add(new UsersResponse(2, "User 2"));
-        usersResponseList.add(new UsersResponse(3, "User 3"));
+        List<UserResponse> usersResponseList = new ArrayList<>();
+        usersResponseList.add(new UserResponse(1, "User 1"));
+        usersResponseList.add(new UserResponse(2, "User 2"));
+        usersResponseList.add(new UserResponse(3, "User 3"));
         pagingResponse.setUsersResponse(usersResponseList);
         return pagingResponse;
     }
 
     @GetMapping("/users/{id}")
-    public UsersResponse getUserById(@PathVariable int id) {
-        return new UsersResponse(id, "User " + id);
+    public UserResponse getUserById(@PathVariable int id) {
+        return new UserResponse(id, "User " + id);
     }
 
     @PostMapping("/users")
-    public UsersResponse createNewUser(@RequestBody NewUserRequest request) {
-        return new UsersResponse(0, request.getName() + request.getAge());
+    public UserResponse createNewUser(@RequestBody NewUserRequest request) {
+        return new UserResponse(0, request.getName() + request.getAge());
     }
 
 }
