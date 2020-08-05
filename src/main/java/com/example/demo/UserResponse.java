@@ -1,0 +1,28 @@
+package com.example.demo;
+
+public class UserResponse {
+    private int id;
+    private  String name;
+
+        UserResponse(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    //Generate Get Set
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
