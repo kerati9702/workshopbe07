@@ -1,10 +1,10 @@
 package com.example.demo;
 
-public class UsersResponse {
+public class UserResponse {
     private int id;
     private String name;
 
-    public UsersResponse(int id, String name) {
+    public UserResponse(int id, String name) {
         this.id = id;
         this.name = name;
     }
