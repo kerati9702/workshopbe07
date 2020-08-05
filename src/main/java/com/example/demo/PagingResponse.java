@@ -8,7 +8,7 @@ import java.util.List;
 @JsonPropertyOrder({"page", "item_per_page", "users"})
 public class PagingResponse {
     @JsonProperty("users")
-    private List<UserResponse> usersResponseList;
+    private List<UsersResponse> usersResponseList;
 
     private int page;
 
@@ -20,11 +20,11 @@ public class PagingResponse {
         this.itemPerPage = itemPerPage;
     }
 
-    public void setUsersResponse(List<UserResponse> usersResponseList) {
+    public void setUsersResponse(List<UsersResponse> usersResponseList) {
         this.usersResponseList = usersResponseList;
     }
 
-    public List<UserResponse> getUsersResponseList() {
+    public List<UsersResponse> getUsersResponseList() {
         return usersResponseList;
     }
 
